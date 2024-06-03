@@ -30,7 +30,7 @@ const NewReport = () => {
       <Column lg={16} md={8} sm={4}>
         <Grid className="newreport-page__banner">
           <Column lg={16} md={4} sm={4}>
-            <Breadcrumb noTrailingSlash aria-label="Page navigation">
+            <Breadcrumb omitTrailingSlash ariaLabel="Page navigation">
               <BreadcrumbItem>
                 <a href="/">Home</a>
               </BreadcrumbItem>
@@ -119,7 +119,7 @@ const NewReport = () => {
                 <FormGroup legendText="">
                   <FileUploaderDropContainer 
                     id="files"
-                    labelText="Drag and drop files here or click to upload"
+                    buttonLabel="Drag and drop files here or click to upload"
                   />
                 </FormGroup>
               </Card>

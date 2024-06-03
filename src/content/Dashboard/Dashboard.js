@@ -141,7 +141,7 @@ const Dashboard = () => {
       <Column lg={16} md={8} sm={4}>
         <Grid className="dashboard-page__banner">
           <Column lg={16} md={4} sm={4}>
-            <Breadcrumb noTrailingSlash aria-label="Page navigation">
+            <Breadcrumb omitTrailingSlash ariaLabel="Page navigation">
               <BreadcrumbItem>
                 <a href="/">Home</a>
               </BreadcrumbItem>
