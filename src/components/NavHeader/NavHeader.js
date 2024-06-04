@@ -32,9 +32,9 @@ const NavHeader = (props) => {
         <Header aria-label={props.title}>
           <SkipToContent />
           <HeaderMenuButton
-            aria-label="Open menu"
+            ariaLabel="Open menu"
             onClick={onClickSideNavExpand}
-            isActive={isSideNavExpanded}
+            active={isSideNavExpanded}
           />
           <HeaderName element={Link} to="/" prefix="IBM">
             {props.title}
