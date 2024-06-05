@@ -1,27 +1,23 @@
 import React, { useContext } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 import AuthContext from "../Auth/auth-context";
 
 import {
   Header,
   HeaderContainer,
+  HeaderGlobalAction,
+  HeaderGlobalBar,
   HeaderMenuButton,
   HeaderMenuItem,
   HeaderName,
   HeaderNavigation,
   HeaderSideNavItems,
-  HeaderGlobalBar,
-  HeaderGlobalAction,
-  SkipToContent,
   SideNav,
   SideNavItems,
-//  SideNavLink,
-//  SideNavMenu,
-//  SideNavMenuItem
+  SkipToContent,
 } from "@carbon/react";
 import { Logout, UserAvatar } from "@carbon/react/icons";
-
 
 const NavHeader = (props) => {
   const authCtx = useContext(AuthContext);
@@ -47,11 +43,24 @@ const NavHeader = (props) => {
           <SideNav
             aria-label="Side navigation"
             expanded={isSideNavExpanded}
-            isPersistent={false}>
+            isPersistent={false}
+          >
             <SideNavItems>
               <HeaderSideNavItems>
-                <HeaderMenuItem element={Link} to="/newreport">
-                  New Report
+                <HeaderMenuItem element={Link} to="/newreport1">
+                  New Report1
+                </HeaderMenuItem>
+                <HeaderMenuItem element={Link} to="/newreport2">
+                  New Report2
+                </HeaderMenuItem>
+                <HeaderMenuItem element={Link} to="/newreport3">
+                  New Report3
+                </HeaderMenuItem>
+                <HeaderMenuItem element={Link} to="/newreport4">
+                  New Report4
+                </HeaderMenuItem>
+                <HeaderMenuItem element={Link} to="/newreport4">
+                  New Report4
                 </HeaderMenuItem>
               </HeaderSideNavItems>
             </SideNavItems>
