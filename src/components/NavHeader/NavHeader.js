@@ -1,3 +1,4 @@
+import { HeaderMenuButton } from "@carbon/react/new";
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 
@@ -8,7 +9,6 @@ import {
   HeaderContainer,
   HeaderGlobalAction,
   HeaderGlobalBar,
-  HeaderMenuButton,
   HeaderMenuItem,
   HeaderName,
   HeaderNavigation,
@@ -31,7 +31,7 @@ const NavHeader = (props) => {
             ariaLabel="Open menu"
             onClick={onClickSideNavExpand}
             active={isSideNavExpanded}
-          />
+             />
           <HeaderName element={Link} to="/" prefix="IBM">
             {props.title}
           </HeaderName>
