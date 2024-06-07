@@ -36,7 +36,7 @@ const NavHeader = (props) => {
             {props.title}
           </HeaderName>
           <HeaderNavigation aria-label="New Report">
-            <HeaderMenuItem element={Link} to="/newreport">
+            <HeaderMenuItem element={Link} to="/newreport" >
               New Report
             </HeaderMenuItem>
           </HeaderNavigation>
@@ -47,19 +47,19 @@ const NavHeader = (props) => {
           >
             <SideNavItems>
               <HeaderSideNavItems>
-                <HeaderMenuItem element={Link} to="/newreport1">
+                <HeaderMenuItem element={Link} to="/newreport1" >
                   New Report1
                 </HeaderMenuItem>
-                <HeaderMenuItem element={Link} to="/newreport2">
+                <HeaderMenuItem element="Link" to="/newreport2" >
                   New Report2
                 </HeaderMenuItem>
-                <HeaderMenuItem element={Link} to="/newreport3">
+                <HeaderMenuItem element={Link} to="/newreport3" >
                   New Report3
                 </HeaderMenuItem>
-                <HeaderMenuItem element={Link} to="/newreport4">
+                <HeaderMenuItem element={Link} to="/newreport4" >
                   New Report4
                 </HeaderMenuItem>
-                <HeaderMenuItem element={Link} to="/newreport4">
+                <HeaderMenuItem element={Link} to="/newreport4" >
                   New Report4
                 </HeaderMenuItem>
               </HeaderSideNavItems>
