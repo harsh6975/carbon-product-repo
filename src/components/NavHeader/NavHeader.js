@@ -35,7 +35,7 @@ const NavHeader = (props) => {
           <HeaderName element={Link} to="/" prefix="IBM">
             {props.title}
           </HeaderName>
-          <HeaderNavigation aria-label="New Report">
+          <HeaderNavigation aria-label="New Report" >
             <HeaderMenuItem element="Link" to="/newreport" >
               New Report
             </HeaderMenuItem>
