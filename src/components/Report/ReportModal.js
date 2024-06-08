@@ -39,8 +39,7 @@ const ReportModal = (props) => {
       value={incident.location}
       style={ { marginBottom: '1rem' } }
       disabled="true"
-      
-    />
+       />
     <TextInput
       id="case_date"
       value={formattedDate}
