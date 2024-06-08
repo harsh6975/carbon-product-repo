@@ -64,14 +64,14 @@ const NewReport = () => {
                   id="case_number"
                   placeholder="Case Number"
                   labelText="Case Number"
-                  data-changed="true" />
+                   />
                 <TextInput
                   id="date"
                   placeholder="Date"
                   labelText="Date"
                   type="date"
-                  data-changed="true" />
-                <TextInput id="time" labelText="Select a time" type="time" data-changed="true" />
+                   />
+                <TextInput id="time" labelText="Select a time" type="time"  />
                 <TextArea
                   id="incident_description"
                   labelText="Please describe incident"
@@ -95,14 +95,14 @@ const NewReport = () => {
             <Column lg={6} md={4} sm={4}>
               <Card className="newreport-page__card">
                 <h4>Address</h4>
-                <TextInput id="street" placeholder="Street" labelText="Street" data-changed="true" />
-                <TextInput id="city" placeholder="City" labelText="City" data-changed="true" />
-                <TextInput id="state" placeholder="State" labelText="State" data-changed="true" />
+                <TextInput id="street" placeholder="Street" labelText="Street"  />
+                <TextInput id="city" placeholder="City" labelText="City"  />
+                <TextInput id="state" placeholder="State" labelText="State"  />
                 <TextInput
                   id="zipcode"
                   placeholder="Zip Code"
                   labelText="Zip Code"
-                  data-changed="true" />
+                   />
               </Card>
             </Column>
           </Grid>

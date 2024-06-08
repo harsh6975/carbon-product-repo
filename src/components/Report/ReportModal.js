@@ -32,14 +32,14 @@ const ReportModal = (props) => {
       value={incident.number}
       style={ { marginBottom: '1rem' } }
       disabled="true"
-      data-changed="true" />
+       />
     <TextInput
       id="location"
       labelText="Location"
       value={incident.location}
       style={ { marginBottom: '1rem' } }
       disabled="true"
-      data-changed="true"
+      
     />
     <TextInput
       id="case_date"
@@ -47,7 +47,7 @@ const ReportModal = (props) => {
       labelText="Case Date"
       type="date"
       disabled="true"
-      data-changed="true" />
+       />
     <Select id="incident_type" defaultValue={incident.incident_type} labelText="Incident Type">
       <SelectItem value="Negligence" text="Negligence"  />
       <SelectItem value="Harrassment" text="Harrassment"  />

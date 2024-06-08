@@ -135,26 +135,26 @@ const Login = (props) => {
               <TextInput
                 ref={emailInputRef}
                 id="username"
-                required="true"
+                required
                 placeholder="Username"
                 labelText=""
                 value={emailState.value}
                 onChange={emailChangeHandler}
                 onBlur={validateEmailHandler}
-                data-changed="true" />
+              />
             </div>
             <div className="login__control">
               <TextInput
                 ref={passwordInputRef}
                 type="password"
                 id="password"
-                required="true"
+                required
                 placeholder="Password"
                 labelText=""
                 value={passwordState.value}
                 onChange={passwordChangeHandler}
                 onBlur={validatePasswordHandler}
-                data-changed="true" />
+              />
             </div>
             <div className="login__button">
               <Button renderIcon={(props) => <ArrowRight size={20} {...props} />} type="submit">Continue</Button>

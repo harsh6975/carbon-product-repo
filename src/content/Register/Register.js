@@ -27,31 +27,35 @@ const Register = (props) => {
           <h2>Register</h2>
           <Form>
             <div className="register__control">
-              <TextInput id="username" required="true" placeholder="Username" data-changed="true" />
+              <TextInput
+                id="username"
+                required
+                placeholder="Username"
+              />
             </div>
             <div className="register__control">
               <TextInput
                 type="email"
                 id="email"
-                required="true"
+                required
                 placeholder="Email"
-                data-changed="true" />
+              />
             </div>
             <div className="register__control">
               <TextInput
                 type="password"
                 id="password"
-                required="true"
+                required
                 placeholder="Password"
-                data-changed="true" />
+              />
             </div>
             <div className="register__control">
               <TextInput
                 type="password"
                 id="passwordConfirm"
-                required="true"
+                required
                 placeholder="Repeat Password"
-                data-changed="true" />
+              />
             </div>
             <div className="register__button">
               <Button renderIcon={(props) => <Add size={20} {...props} />} type="submit">Create Account</Button>
