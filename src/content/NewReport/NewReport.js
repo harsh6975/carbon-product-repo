@@ -60,22 +60,18 @@ const NewReport = () => {
                   <SelectItem value="po_h" text="Police Harrassment"  />
                   <SelectItem value="po_b" text="Police Brutality"  />
                 </Select>
-                <TextInput 
+                <TextInput
                   id="case_number"
                   placeholder="Case Number"
                   labelText="Case Number"
-                />
-                <TextInput 
+                  data-changed="true" />
+                <TextInput
                   id="date"
                   placeholder="Date"
                   labelText="Date"
                   type="date"
-                />
-                <TextInput 
-                  id="time"
-                  labelText="Select a time"
-                  type="time"
-                />
+                  data-changed="true" />
+                <TextInput id="time" labelText="Select a time" type="time" data-changed="true" />
                 <TextArea
                   id="incident_description"
                   labelText="Please describe incident"
@@ -99,26 +95,14 @@ const NewReport = () => {
             <Column lg={6} md={4} sm={4}>
               <Card className="newreport-page__card">
                 <h4>Address</h4>
-                <TextInput 
-                  id="street"
-                  placeholder="Street"
-                  labelText="Street"
-                />
-                <TextInput 
-                  id="city"
-                  placeholder="City"
-                  labelText="City"
-                />
-                <TextInput 
-                  id="state"
-                  placeholder="State"
-                  labelText="State"
-                />
-                <TextInput 
+                <TextInput id="street" placeholder="Street" labelText="Street" data-changed="true" />
+                <TextInput id="city" placeholder="City" labelText="City" data-changed="true" />
+                <TextInput id="state" placeholder="State" labelText="State" data-changed="true" />
+                <TextInput
                   id="zipcode"
                   placeholder="Zip Code"
                   labelText="Zip Code"
-                />
+                  data-changed="true" />
               </Card>
             </Column>
           </Grid>

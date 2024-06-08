@@ -69,74 +69,70 @@ const UserProfile = (props) => {
                   <Column lg={16} md={4} sm={4}>
                     <Grid>
                       <Column lg={8} md={4} sm={4}>
-                        <TextInput 
+                        <TextInput
                           id="company"
-                          disabled
+                          disabled="true"
                           labelText="Company (Disabled)"
                           value={userDetails.company}
-                        />
+                          data-changed="true" />
                       </Column>
                       <Column lg={3} md={4} sm={4}>
-                        <TextInput 
+                        <TextInput
                           id="username"
                           labelText="Username"
                           value={userDetails.username}
-                        />
+                          data-changed="true" />
                       </Column>
                       <Column lg={5} md={4} sm={4}>
-                        <TextInput 
+                        <TextInput
                           id="email"
                           labelText="Email Address"
                           value={userDetails.email}
-                        />
+                          data-changed="true" />
                       </Column>
                     </Grid>
                     <Grid>
                       <Column lg={8} md={4} sm={4}>
-                        <TextInput 
+                        <TextInput
                           id="firstname"
                           labelText="First Name"
                           value={userDetails.fullName.split(' ').slice(1)}
-                        />
+                          data-changed="true" />
                       </Column>
                       <Column lg={8} md={4} sm={4}>
-                        <TextInput 
+                        <TextInput
                           id="lastname"
                           labelText="Last Name"
                           value={userDetails.fullName.split(' ').slice(-1)}
-                        />
+                          data-changed="true" />
                       </Column>
                     </Grid>
                     <Grid>
                       <Column lg={16} md={4} sm={4}>
-                        <TextInput 
+                        <TextInput
                           id="address"
                           labelText="Address"
                           value={userDetails.address}
-                        />
+                          data-changed="true" />
                       </Column>
                     </Grid>
                     <Grid>
                       <Column lg={6} md={4} sm={4}>
-                        <TextInput 
-                          id="city"
-                          labelText="City"
-                          value={userDetails.city}
-                        />
+                        <TextInput id="city" labelText="City" value={userDetails.city} data-changed="true" />
                       </Column>
                       <Column lg={5} md={4} sm={4}>
-                        <TextInput 
+                        <TextInput
                           id="state"
                           labelText="State"
                           value={userDetails.state}
-                        />
+                          data-changed="true" />
                       </Column>
                       <Column lg={5} md={4} sm={4}>
-                        <TextInput 
+                        <TextInput
                           id="zipcode"
                           labelText="Postal Code"
                           value={userDetails.zipcode}
-                        />
+                          data-changed="true" />
                       </Column>
                     </Grid>
                     <Grid>

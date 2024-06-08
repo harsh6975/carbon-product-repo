@@ -26,28 +26,28 @@ const ReportModal = (props) => {
       Remember only certain portions of the incident may be updated.
     </p>
     <TextInput
-      data-modal-primary-focus
+      data-modal-primary-focus="true"
       id="number"
       labelText="Number"
       value={incident.number}
-      style={{ marginBottom: '1rem' }}
-      disabled
-    />
+      style={ { marginBottom: '1rem' } }
+      disabled="true"
+      data-changed="true" />
     <TextInput
-      data-modal-primary-focus
       id="location"
       labelText="Location"
       value={incident.location}
-      style={{ marginBottom: '1rem' }}
-      disabled
+      style={ { marginBottom: '1rem' } }
+      disabled="true"
+      data-changed="true"
     />
-    <TextInput 
+    <TextInput
       id="case_date"
       value={formattedDate}
       labelText="Case Date"
       type="date"
-      disabled
-    />
+      disabled="true"
+      data-changed="true" />
     <Select id="incident_type" defaultValue={incident.incident_type} labelText="Incident Type">
       <SelectItem value="Negligence" text="Negligence"  />
       <SelectItem value="Harrassment" text="Harrassment"  />
