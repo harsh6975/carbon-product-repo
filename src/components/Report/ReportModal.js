@@ -49,17 +49,17 @@ const ReportModal = (props) => {
       disabled
     />
     <Select id="incident_type" defaultValue={incident.incident_type} labelText="Incident Type">
-      <SelectItem value="Negligence" text="Negligence" />
-      <SelectItem value="Harrassment" text="Harrassment" />
-      <SelectItem value="Brutality" text="Brutality" />
+      <SelectItem value="Negligence" text="Negligence"  />
+      <SelectItem value="Harrassment" text="Harrassment"  />
+      <SelectItem value="Brutality" text="Brutality"  />
     </Select>
     <Select id="case_officer" defaultValue={incident.case_officer} labelText="Case Officer">
-      <SelectItem value="Harry" text="Harry" />
-      <SelectItem value="Rick" text="Rick" />
-      <SelectItem value="Simon" text="Simon" />
-      <SelectItem value="Bobby" text="Bobby" />
-      <SelectItem value="William" text="William" />
-      <SelectItem value="David" text="David" />
+      <SelectItem value="Harry" text="Harry"  />
+      <SelectItem value="Rick" text="Rick"  />
+      <SelectItem value="Simon" text="Simon"  />
+      <SelectItem value="Bobby" text="Bobby"  />
+      <SelectItem value="William" text="William"  />
+      <SelectItem value="David" text="David"  />
     </Select>
   </Modal>
   );

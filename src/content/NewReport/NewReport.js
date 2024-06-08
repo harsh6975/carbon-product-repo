@@ -51,9 +51,14 @@ const NewReport = () => {
               <Card className="newreport-page__card">
                 <h4>Incident</h4>
                 <Select id="incident_type" defaultValue="placeholder-item" >
-                  <SelectItem disabled hidden value="placeholder-item" text="Choose an option" />
-                  <SelectItem value="po_h" text="Police Harrassment" />
-                  <SelectItem value="po_b" text="Police Brutality" />
+                  <SelectItem
+                    disabled="true"
+                    hidden="true"
+                    value="placeholder-item"
+                    text="Choose an option"
+                     />
+                  <SelectItem value="po_h" text="Police Harrassment"  />
+                  <SelectItem value="po_b" text="Police Brutality"  />
                 </Select>
                 <TextInput 
                   id="case_number"
@@ -76,13 +81,18 @@ const NewReport = () => {
                   labelText="Please describe incident"
                 />
                 <Select id="audio_language" defaultValue="placeholder-item" >
-                  <SelectItem disabled hidden value="placeholder-item" text="Choose an option" />
-                  <SelectItem value="lang_eng" text="English" />
-                  <SelectItem value="lang_esp" text="Spanish" />
-                  <SelectItem value="lang_fr"  text="French" />
-                  <SelectItem value="lang_it"  text="Italian" />
+                  <SelectItem
+                    disabled="true"
+                    hidden="true"
+                    value="placeholder-item"
+                    text="Choose an option"
+                     />
+                  <SelectItem value="lang_eng" text="English"  />
+                  <SelectItem value="lang_esp" text="Spanish"  />
+                  <SelectItem value="lang_fr" text="French"  />
+                  <SelectItem value="lang_it" text="Italian"  />
                   <SelectItem value="lang_jap" text="Japanese" />
-                  <SelectItem value="lang_sk"  text="Korean" />
+                  <SelectItem value="lang_sk" text="Korean"  />
                 </Select>
               </Card>
             </Column>
