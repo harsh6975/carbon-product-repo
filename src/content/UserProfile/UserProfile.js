@@ -36,9 +36,9 @@ const UserProfile = (props) => {
 
   return (
     <Grid fullWidth className="userprofile-page">
-      <Column lg={16} md={8} sm={4} >
+      <Column lg="16" md="8" sm="4" >
         <Grid className="userprofile-page__banner">
-          <Column lg={16} md={4} sm={4}>
+          <Column lg="16" md="4" sm="4" >
             <Breadcrumb omitTrailingSlash ariaLabel="Page navigation">
               <BreadcrumbItem>
                 <a href="/">Home</a>
@@ -48,7 +48,7 @@ const UserProfile = (props) => {
               </BreadcrumbItem>
             </Breadcrumb>
           </Column>
-          <Column lg={16} md={4} sm={4}>
+          <Column lg="16" md="4" sm="4" >
             <h1 className="userprofile-page__heading">
               User <span style={{fontWeight: 'bold'}}>{userDetails.fullName}</span>
             </h1>
@@ -56,19 +56,24 @@ const UserProfile = (props) => {
         </Grid>
         <Form>
           <Grid>
-            <Column lg={3} md={4} sm={4} style={{textAlign: 'center'}}>
+            <Column
+              lg="3"
+              md="4"
+              sm="4"
+              className={textAlign: 'center'}
+              >
               <Card className="userprofile-page__card">
                 <img src={userProfileImage} alt="User" style={{border: '0px solid #000', width: '98%', borderRadius: '5%'}} /><br />
                 <span className="userprofile-page__fullnameUnderPic">{userDetails.fullName}</span><br />
                 <span className="userprofile-page__usernameUnderPic">{userDetails.username}</span>
               </Card>
             </Column>
-            <Column lg={13} md={4} sm={4}>
+            <Column lg="13" md="4" sm="4" >
               <Card className="userprofile-page__card">
                 <Grid className="userprofile_page__fields">
-                  <Column lg={16} md={4} sm={4}>
+                  <Column lg="16" md="4" sm="4" >
                     <Grid>
-                      <Column lg={8} md={4} sm={4}>
+                      <Column lg="8" md="4" sm="4" >
                         <TextInput
                           id="company"
                           disabled="true"
@@ -76,14 +81,14 @@ const UserProfile = (props) => {
                           value={userDetails.company}
                            />
                       </Column>
-                      <Column lg={3} md={4} sm={4}>
+                      <Column lg="3" md="4" sm="4" >
                         <TextInput
                           id="username"
                           labelText="Username"
                           value={userDetails.username}
                            />
                       </Column>
-                      <Column lg={5} md={4} sm={4}>
+                      <Column lg="5" md="4" sm="4" >
                         <TextInput
                           id="email"
                           labelText="Email Address"
@@ -92,14 +97,14 @@ const UserProfile = (props) => {
                       </Column>
                     </Grid>
                     <Grid>
-                      <Column lg={8} md={4} sm={4}>
+                      <Column lg="8" md="4" sm="4" >
                         <TextInput
                           id="firstname"
                           labelText="First Name"
                           value={userDetails.fullName.split(' ').slice(1)}
                            />
                       </Column>
-                      <Column lg={8} md={4} sm={4}>
+                      <Column lg="8" md="4" sm="4" >
                         <TextInput
                           id="lastname"
                           labelText="Last Name"
@@ -108,7 +113,7 @@ const UserProfile = (props) => {
                       </Column>
                     </Grid>
                     <Grid>
-                      <Column lg={16} md={4} sm={4}>
+                      <Column lg="16" md="4" sm="4" >
                         <TextInput
                           id="address"
                           labelText="Address"
@@ -117,17 +122,17 @@ const UserProfile = (props) => {
                       </Column>
                     </Grid>
                     <Grid>
-                      <Column lg={6} md={4} sm={4}>
+                      <Column lg="6" md="4" sm="4" >
                         <TextInput id="city" labelText="City" value={userDetails.city}  />
                       </Column>
-                      <Column lg={5} md={4} sm={4}>
+                      <Column lg="5" md="4" sm="4" >
                         <TextInput
                           id="state"
                           labelText="State"
                           value={userDetails.state}
                            />
                       </Column>
-                      <Column lg={5} md={4} sm={4}>
+                      <Column lg="5" md="4" sm="4" >
                         <TextInput
                           id="zipcode"
                           labelText="Postal Code"
@@ -136,7 +141,7 @@ const UserProfile = (props) => {
                       </Column>
                     </Grid>
                     <Grid>
-                      <Column lg={16} md={4} sm={4}>
+                      <Column lg="16" md="4" sm="4" >
                         <TextArea
                           id="aboutme"
                           labelText="About Me"
@@ -150,7 +155,12 @@ const UserProfile = (props) => {
             </Column>
           </Grid>
           <Grid className="userprofile-page__actions">
-            <Column lg={16} md={8} sm={4} className="userprofile-page__update">
+            <Column
+              lg="16"
+              md="8"
+              sm="4"
+              className="userprofile-page__update"
+              >
               <Button type="submit">Update</Button>
               <Button type="button" kind="secondary" onClick={routeChange}>Close</Button>
             </Column>
