@@ -7,7 +7,12 @@ import {
 const PageSeparator = (props) => {
   return (
     <Grid>
-      <Column lg={16} md={8} sm={4} className="dashboard-page__separator">
+      <Column
+        lg="16"
+        md="8"
+        sm="4"
+        className="dashboard-page__separator"
+        >
           <h4>{props.title}</h4>
       </Column>
     </Grid>
