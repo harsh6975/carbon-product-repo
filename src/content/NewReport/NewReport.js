@@ -71,7 +71,7 @@ const NewReport = () => {
                   labelText="Date"
                   type="text"
                    />
-                <TextInput id="time" labelText="Select a time" type="time"  />
+                <PasswordInput id="time" labelText="Select a time" type="time"  />
                 <TextArea
                   id="incident_description"
                   labelText="Please describe incident"
@@ -122,7 +122,7 @@ const NewReport = () => {
               </Card>
             </Column>
           </CSSGrid>
-          <Grid>
+          <CSSGrid className="newreport-page" fullWidth="true" >
             <Column lg={16} md={8} sm={4} className="newreport-page__r2">
               <Card className="newreport-page__card">
                 <h4>Upload Files (Audio, Video)</h4>
@@ -134,7 +134,7 @@ const NewReport = () => {
                 </FormGroup>
               </Card>
             </Column>
-          </Grid>
+          </CSSGrid>
           <CSSGrid className="newreport-page__actions" >
             <Column lg={16} md={8} sm={4} className="newreport-page__save">
               <Button type="submit">Save</Button>
