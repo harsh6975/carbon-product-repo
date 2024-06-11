@@ -1,12 +1,8 @@
+import { PasswordInput } from "@carbon/react";
 import React from 'react';
 import Moment from 'moment';
 
-import { 
-  Modal,
-  TextInput,
-  Select,
-  SelectItem
-} from '@carbon/react';
+import { Modal, Select, SelectItem } from '@carbon/react';
 
 const ReportModal = (props) => {
   const incident = props.incident;
@@ -25,23 +21,21 @@ const ReportModal = (props) => {
     <p style={{ marginBottom: '1rem' }}>
       Remember only certain portions of the incident may be updated.
     </p>
-    <TextInput
-      data-modal-primary-focus="true"
+    <PasswordInput
       id="number"
       labelText="Number"
       value={incident.number}
-      style={ { marginBottom: '1rem' } }
       disabled="true"
        />
-    <TextInput
+    <PasswordInput
       id="location"
       labelText="Location"
       value={incident.location}
-      style={ { marginBottom: '1rem' } }
       disabled="true"
+      
        />
-    <TextInput
-      id="case_date"
+    <PasswordInput
+      id={case_date}
       value={formattedDate}
       labelText="Case Date"
       type="date"

@@ -1,3 +1,5 @@
+import { PasswordInput } from "@carbon/react";
+import { CSSGrid } from "@carbon/react";
 import React from 'react';
 import { useNavigate } from "react-router-dom";
 
@@ -7,13 +9,11 @@ import {
   FileUploaderDropContainer,
   Form,
   FormGroup,
-  TextInput,
   Select,
   SelectItem,
   TextArea,
   Button,
-  Grid,
-  Column
+  Column,
 } from '@carbon/react';
 
 import Card from '../../components/Card/Card';
@@ -26,9 +26,9 @@ const NewReport = () => {
   }
 
   return (
-    <Grid className="newreport-page" fullWidth>
+    <CSSGrid className="newreport-page" fullWidth="true" >
       <Column lg={16} md={8} sm={4}>
-        <Grid className="newreport-page__banner">
+        <CSSGrid className="newreport-page__banner" >
           <Column lg={16} md={4} sm={4}>
             <Breadcrumb omitTrailingSlash ariaLabel="Page navigation">
               <BreadcrumbItem>
@@ -44,9 +44,9 @@ const NewReport = () => {
               New <span style={{fontWeight: 'bolder'}}>Witness Report</span>
             </h1>
           </Column>
-        </Grid>
+        </CSSGrid>
         <Form>
-          <Grid>
+          <CSSGrid >
             <Column lg={10} md={4} sm={4}>
               <Card className="newreport-page__card">
                 <h4>Incident</h4>
@@ -60,16 +60,16 @@ const NewReport = () => {
                   <SelectItem value="po_h" text="Police Harrassment"  />
                   <SelectItem value="po_b" text="Police Brutality"  />
                 </Select>
-                <TextInput
+                <PasswordInput
                   id="case_number"
                   placeholder="Case Number"
                   labelText="Case Number"
                    />
-                <TextInput
+                <PasswordInput
                   id="date"
                   placeholder="Date"
                   labelText="Date"
-                  type="date"
+                  type="text"
                    />
                 <TextInput id="time" labelText="Select a time" type="time"  />
                 <TextArea
@@ -95,17 +95,33 @@ const NewReport = () => {
             <Column lg={6} md={4} sm={4}>
               <Card className="newreport-page__card">
                 <h4>Address</h4>
-                <TextInput id="street" placeholder="Street" labelText="Street"  />
-                <TextInput id="city" placeholder="City" labelText="City"  />
-                <TextInput id="state" placeholder="State" labelText="State"  />
-                <TextInput
+                <PasswordInput
+                  id="street"
+                  placeholder="Street"
+                  labelText="Street"
+                  type="text"
+                   />
+                <PasswordInput
+                  id="city"
+                  placeholder="City"
+                  labelText="City"
+                  type="text"
+                   />
+                <PasswordInput
+                  id="state"
+                  placeholder="State"
+                  labelText="State"
+                  type="text"
+                   />
+                <PasswordInput
                   id="zipcode"
                   placeholder="Zip Code"
                   labelText="Zip Code"
+                  type="text"
                    />
               </Card>
             </Column>
-          </Grid>
+          </CSSGrid>
           <Grid>
             <Column lg={16} md={8} sm={4} className="newreport-page__r2">
               <Card className="newreport-page__card">
@@ -119,15 +135,15 @@ const NewReport = () => {
               </Card>
             </Column>
           </Grid>
-          <Grid className="newreport-page__actions">
+          <CSSGrid className="newreport-page__actions" >
             <Column lg={16} md={8} sm={4} className="newreport-page__save">
               <Button type="submit">Save</Button>
               <Button type="button" kind="secondary" onClick={routeChange}>Cancel</Button>
             </Column>
-          </Grid>
+          </CSSGrid>
         </Form>
       </Column>
-    </Grid>
+    </CSSGrid>
   );
 };
 
