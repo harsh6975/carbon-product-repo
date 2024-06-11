@@ -1,14 +1,11 @@
+import { PasswordInput } from "@carbon/react";
 import React, { useState, useEffect, useReducer, useContext, useRef } from "react";
 import { Link } from 'react-router-dom';
 
 import AuthContext from "../../components/Auth/auth-context";
 
 import Card from '../../components/Card/Card';
-import {
-  Form,
-  TextInput,
-  Button,
-} from '@carbon/react';
+import { Form, Button } from '@carbon/react';
 
 import { ArrowRight } from '@carbon/react/icons';
 
@@ -132,29 +129,29 @@ const Login = (props) => {
           <h2>Log in</h2>
           <Form onSubmit={submitHandler}>
             <div className="login__control">
-              <TextInput
+              <PasswordInput
                 ref={emailInputRef}
                 id="username"
-                required
                 placeholder="Username"
                 labelText=""
                 value={emailState.value}
                 onChange={emailChangeHandler}
-                onBlur={validateEmailHandler}
+                type="text"
+                
               />
             </div>
             <div className="login__control">
-              <TextInput
+              <PasswordInput
                 ref={passwordInputRef}
                 type="password"
                 id="password"
-                required
+                required="true"
                 placeholder="Password"
                 labelText=""
                 value={passwordState.value}
                 onChange={passwordChangeHandler}
                 onBlur={validatePasswordHandler}
-              />
+                 />
             </div>
             <div className="login__button">
               <Button renderIcon={(props) => <ArrowRight size={20} {...props} />} type="submit">Continue</Button>
