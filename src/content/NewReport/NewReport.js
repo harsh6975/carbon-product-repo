@@ -127,10 +127,10 @@ const NewReport = () => {
               <Card className="newreport-page__card">
                 <h4>Upload Files (Audio, Video)</h4>
                 <FormGroup legendText="">
-                  <FileUploaderDropContainer 
+                  <FileUploaderDropContainer
                     id="files"
-                    buttonLabel="Drag and drop files here or click to upload"
-                  />
+                    labelText="Drag and drop files here or click to upload"
+                     />
                 </FormGroup>
               </Card>
             </Column>
