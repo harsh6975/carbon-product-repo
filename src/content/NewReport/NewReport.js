@@ -30,7 +30,7 @@ const NewReport = () => {
       <Column lg={16} md={8} sm={4}>
         <CSSGrid className="newreport-page__banner" >
           <Column lg={16} md={4} sm={4}>
-            <Breadcrumb omitTrailingSlash ariaLabel="Page navigation">
+            <Breadcrumb noTrailingSlash="true" aria-label="Page navigation" >
               <BreadcrumbItem>
                 <a href="/">Home</a>
               </BreadcrumbItem>
