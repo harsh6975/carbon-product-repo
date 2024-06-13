@@ -1,3 +1,4 @@
+import { Col } from "@antd";
 import { PasswordInput } from "@carbon/react";
 import { CSSGrid } from "@carbon/react";
 import React from 'react';
@@ -13,7 +14,6 @@ import {
   SelectItem,
   TextArea,
   Button,
-  Column,
 } from '@carbon/react';
 
 import Card from '../../components/Card/Card';
@@ -27,9 +27,9 @@ const NewReport = () => {
 
   return (
     <CSSGrid className="newreport-page" fullWidth="true" >
-      <Column lg={16} md={8} sm={4}>
+      <Col lg="16" md="8" sm="4" >
         <CSSGrid className="newreport-page__banner" >
-          <Column lg={16} md={4} sm={4}>
+          <Col lg="16" md="4" sm="4" >
             <Breadcrumb noTrailingSlash="true" aria-label="Page navigation" >
               <BreadcrumbItem>
                 <a href="/">Home</a>
@@ -38,16 +38,16 @@ const NewReport = () => {
                 New Report
               </BreadcrumbItem>
             </Breadcrumb>
-          </Column>
-          <Column lg={16} md={4} sm={4} >
+          </Col>
+          <Col lg="16" md="4" sm="4" >
             <h1 className="newreport-page__heading">
               New <span style={{fontWeight: 'bolder'}}>Witness Report</span>
             </h1>
-          </Column>
+          </Col>
         </CSSGrid>
         <Form>
           <CSSGrid >
-            <Column lg={10} md={4} sm={4}>
+            <Col lg="10" md="4" sm="4" >
               <Card className="newreport-page__card">
                 <h4>Incident</h4>
                 <Select id="incident_type" defaultValue="placeholder-item" >
@@ -91,8 +91,8 @@ const NewReport = () => {
                   <SelectItem value="lang_sk" text="Korean"  />
                 </Select>
               </Card>
-            </Column>
-            <Column lg={6} md={4} sm={4}>
+            </Col>
+            <Col lg="6" md="4" sm="4" >
               <Card className="newreport-page__card">
                 <h4>Address</h4>
                 <PasswordInput
@@ -120,10 +120,10 @@ const NewReport = () => {
                   type="text"
                    />
               </Card>
-            </Column>
+            </Col>
           </CSSGrid>
           <CSSGrid className="newreport-page" fullWidth="true" >
-            <Column lg={16} md={8} sm={4} className="newreport-page__r2">
+            <Col lg="16" md="8" sm="4" className="newreport-page__r2" >
               <Card className="newreport-page__card">
                 <h4>Upload Files (Audio, Video)</h4>
                 <FormGroup legendText="">
@@ -133,16 +133,21 @@ const NewReport = () => {
                      />
                 </FormGroup>
               </Card>
-            </Column>
+            </Col>
           </CSSGrid>
           <CSSGrid className="newreport-page__actions" >
-            <Column lg={16} md={8} sm={4} className="newreport-page__save">
+            <Col
+              lg="16"
+              md="8"
+              sm="4"
+              className="newreport-page__save"
+              >
               <Button type="submit">Save</Button>
               <Button type="button" kind="secondary" onClick={routeChange}>Cancel</Button>
-            </Column>
+            </Col>
           </CSSGrid>
         </Form>
-      </Column>
+      </Col>
     </CSSGrid>
   );
 };
