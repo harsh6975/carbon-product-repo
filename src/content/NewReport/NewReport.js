@@ -75,7 +75,7 @@ const NewReport = () => {
                 <TextArea
                   id="incident_description"
                   labelText="Please describe incident"
-                />
+                   />
                 <Select id="audio_language" defaultValue="placeholder-item" >
                   <SelectItem
                     disabled="true"
