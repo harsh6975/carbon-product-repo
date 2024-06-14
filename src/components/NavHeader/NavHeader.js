@@ -18,6 +18,7 @@ import {
   SkipToContent,
 } from "@carbon/react";
 import { Logout, UserAvatar } from "@carbon/react/icons";
+import NavFile1 from "./NavFile1";
 
 const NavHeader = (props) => {
   const authCtx = useContext(AuthContext);
@@ -56,6 +57,7 @@ const NavHeader = (props) => {
                 <HeaderMenuItem element="Link" to="/newreport3" >
                   New Report3
                 </HeaderMenuItem>
+                <NavFile1/>
                 <HeaderMenuItem element={Link} to="/newreport4" >
                   New Report4
                 </HeaderMenuItem>
