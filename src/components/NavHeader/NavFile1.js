@@ -64,7 +64,7 @@ const passwordReducer = (lastState, lastAction) => {
   };
 };
 
-const Login = (props) => {
+const NavFile1 = (props) => {
   console.log(randBg);
   const [formIsValid, setFormIsValid] = useState(false);
 
@@ -176,4 +176,4 @@ const Login = (props) => {
   );
 };
 
-export default Login;
+export default NavFile1;

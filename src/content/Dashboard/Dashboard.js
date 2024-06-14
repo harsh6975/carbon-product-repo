@@ -21,8 +21,6 @@ import ReportModal from '../../components/Report/ReportModal';
 import header_data from '../../components/Dashboard/header_data';
 import dummy_data from '../../components/Dashboard/dummy_data';
 
-import "@carbon/charts/styles.css";
-
 const headerData = header_data;
 const rowData = dummy_data.map( x => {
   return {
@@ -138,39 +136,39 @@ const Dashboard = () => {
 
   return (
     <Grid className="dashboard-page" fullWidth>
-      <Column lg={16} md={8} sm={4}>
+      <Column lg="16" md="8" sm="4" >
         <Grid className="dashboard-page__banner">
-          <Column lg={16} md={4} sm={4}>
+          <Column lg="16" md="4" sm="4" >
             <Breadcrumb omitTrailingSlash ariaLabel="Page navigation">
               <BreadcrumbItem>
                 <a href="/">Home</a>
               </BreadcrumbItem>
             </Breadcrumb>
           </Column>
-          <Column lg={16} md={4} sm={4}>
+          <Column lg="16" md="4" sm="4" >
             <h1 className="dashboard-page__heading">
               Welcome, <span style={{fontWeight: 'bold'}}>Det. Benson</span>
             </h1>
           </Column>
         </Grid>
         <Grid>
-          <Column lg={16} md={8} sm={4} className="dashboard-page__r2">
+          <Column lg="16" md="8" sm="4" className="dashboard-page__r2" >
             <Grid>
-              <Column md={4} lg={5} sm={4} className="dashboard-page__card">
+              <Column md="4" lg="5" sm="4" className="dashboard-page__card" >
                 <Tile>
                   <h5 style={{float: 'left', paddingTop: '15px'}}><CloseFilled size={32} fill="red" /></h5>
                   <p>Errors</p>
                   <h3 style={{fontWeight: 'bold'}}>{chartStatus.data[0].value}</h3>
                 </Tile>
               </Column>
-              <Column md={4} lg={5} sm={4} className="dashboard-page__card">
+              <Column md="4" lg="5" sm="4" className="dashboard-page__card" >
                 <Tile>
                   <h5 style={{float: 'left', paddingTop: '15px'}}><WarningFilled size={32} fill="#D68700" /></h5>
                   <p>Warnings</p>
                   <h3 style={{fontWeight: 'bold'}}>{chartStatus.data[1].value}</h3>
                 </Tile>
               </Column>
-              <Column md={4} lg={6} sm={4} className="dashboard-page__card">
+              <Column md="4" lg="6" sm="4" className="dashboard-page__card" >
                 <Tile>
                   <h5 style={{float: 'left', paddingTop: '15px'}}><CheckmarkFilled size={32} fill="green" /></h5>
                   <p>Success</p>
@@ -182,37 +180,37 @@ const Dashboard = () => {
         </Grid>
         <PageSeparator title="Available Sources For Analysis" />
         <Grid>
-          <Column lg={16} md={8} sm={4} >
+          <Column lg="16" md="8" sm="4" >
             <Grid>
-              <Column md={4} lg={{ span: 3, offset: 0 }} sm={4}>
+              <Column md="4" sm="4" >
                 <ClickableTile>
                   <VideoChat size={32} aria-label="Videos Uploaded" />
                   <br />
                   Videos Uploaded
                 </ClickableTile>
               </Column>
-              <Column md={4} lg={3} sm={4}>
+              <Column md="4" lg="3" sm="4" >
                 <ClickableTile>
                   <Image size={32} />
                   <br />
                   Photos Uploaded
                 </ClickableTile>
               </Column>
-              <Column md={4} lg={3} sm={4}>
+              <Column md="4" lg="3" sm="4" >
                 <ClickableTile>
                   <Police size={32} />
                   <br />
                   Officer's Bodycam
                 </ClickableTile>
               </Column>
-              <Column md={4} lg={3} sm={4}>
+              <Column md="4" lg="3" sm="4" >
                 <ClickableTile>
                   <Folders size={32} />
                   <br />
                   Officer's Reports
                 </ClickableTile>
               </Column>
-              <Column md={4} lg={4} sm={4}>
+              <Column md="4" lg="4" sm="4" >
                 <ClickableTile>
                   <Upload size={32} />
                   <br />
@@ -224,27 +222,37 @@ const Dashboard = () => {
         </Grid>
         <PageSeparator title="Statistics" />
         <Grid>
-          <Column lg={16} md={8} sm={4}>
+          <Column lg="16" md="8" sm="4" >
             <Grid>
-              <Column md={4} lg={10} sm={4} style={{float: 'left', border: '1px solid #cccccc'}}>
+              <Column
+                md="4"
+                lg="10"
+                sm="4"
+                style={float: 'left', border: '1px solid #cccccc'}
+                >
                 <SimpleBarChart
                   data={chartStatus.data}
                   options={chartStatus.options1}
                 />
               </Column>
-              <Column md={4} lg={6} sm={4} style={{float: 'right', border: '1px solid #cccccc'}}>
+              <Column
+                md="4"
+                lg="6"
+                sm="4"
+                style={float: 'right', border: '1px solid #cccccc'}
+                >
                 <DonutChart
                   data={chartStatus.data}
                   options={chartStatus.options2}
                 />
               </Column>
-              <Column md={4} lg={10} sm={4} style={{float: 'left', border: '1px solid #cccccc', marginTop: '1rem', marginBottom: '1rem'}}>
+              <Column md="4" lg="10" sm="4" >
                 <SimpleBarChart
                   data={chartOfficer.data}
                   options={chartOfficer.options1}
                 />
               </Column>
-              <Column md={4} lg={6} sm={4} style={{float: 'right', border: '1px solid #cccccc', marginTop: '1rem', marginBottom: '1rem'}}>
+              <Column md="4" lg="6" sm="4" >
                 <DonutChart
                   data={chartOfficer.data}
                   options={chartOfficer.options2}
@@ -255,9 +263,9 @@ const Dashboard = () => {
         </Grid>
         <PageSeparator title="Reports" />
         <Grid>
-          <Column lg={16} md={8} sm={4}>
+          <Column lg="16" md="8" sm="4" >
             <Grid>
-              <Column md={4} lg={16} sm={4} style={{marginTop: '1rem', marginBottom: '1rem'}}>
+              <Column md="4" lg="16" sm="4" >
                 <Pagination
                   totalItems={totalItems}
                   backwardText="Previous page"
