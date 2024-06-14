@@ -1,39 +1,42 @@
-import { PasswordInput } from "@carbon/react";
-import React, { useState, useEffect, useReducer, useContext, useRef } from "react";
-import { Link } from 'react-router-dom';
+import { HeaderMenuButton, PasswordInput } from "@carbon/react";
+import React, {
+  useContext,
+  useEffect,
+  useReducer,
+  useRef,
+  useState,
+} from "react";
+import { Link } from "react-router-dom";
 
 import AuthContext from "../../components/Auth/auth-context";
 
-import Card from '../../components/Card/Card';
-import { Form, Button } from '@carbon/react';
+import { Button, Form } from "@carbon/react";
+import Card from "../../components/Card/Card";
 
-import { ArrowRight } from '@carbon/react/icons';
-
-import staticBg from '../../images/background-013.jpg';
-
-import Register from '../Register/Register';
+import { ArrowRight } from "@carbon/react/icons";
 
 const getRandomInt = (min, max) => {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
-}
+};
 
-const backgroundImages = require.context('../..//images/', true);
-const randBg = backgroundImages('./background-'+ getRandomInt(0,27).toString().padStart(3,'0') +'.jpg');
-
+const backgroundImages = require.context("../..//images/", true);
+const randBg = backgroundImages(
+  "./background-" + getRandomInt(0, 27).toString().padStart(3, "0") + ".jpg"
+);
 
 const emailReducer = (lastState, lastAction) => {
   if (lastAction.type === "USER_INPUT") {
     return {
       value: lastAction.val,
-      isValid: lastAction.val === 'demo'
+      isValid: lastAction.val === "demo",
     };
   }
   if (lastAction.type === "INPUT_BLUR") {
     return {
       value: lastState.value,
-      isValid: lastState.value === 'demo'
+      isValid: lastState.value === "demo",
     };
   }
   return {
@@ -46,13 +49,13 @@ const passwordReducer = (lastState, lastAction) => {
   if (lastAction.type === "USER_INPUT") {
     return {
       value: lastAction.val,
-      isValid: lastAction.val === 'demo'
+      isValid: lastAction.val === "demo",
     };
   }
   if (lastAction.type === "INPUT_BLUR") {
     return {
       value: lastState.value,
-      isValid: lastState.value === 'demo'
+      isValid: lastState.value === "demo",
     };
   }
   return {
@@ -66,13 +69,13 @@ const Login = (props) => {
   const [formIsValid, setFormIsValid] = useState(false);
 
   const [emailState, dispatchEmail] = useReducer(emailReducer, {
-    value: '',
-    isValid: null
+    value: "",
+    isValid: null,
   });
 
   const [passwordState, dispatchPassword] = useReducer(passwordReducer, {
-    value: '',
-    isValid: null
+    value: "",
+    isValid: null,
   });
 
   const authCtx = useContext(AuthContext);
@@ -111,10 +114,10 @@ const Login = (props) => {
   };
 
   const submitHandler = (event) => {
-    event.preventDefault(); 
-    if( formIsValid ) {
+    event.preventDefault();
+    if (formIsValid) {
       authCtx.onLogin();
-    } else if ( !emailIsValid ) {
+    } else if (!emailIsValid) {
       emailInputRef.current.focus();
     } else {
       passwordInputRef.current.focus();
@@ -122,8 +125,8 @@ const Login = (props) => {
   };
 
   return (
-    <div className="login__main" style={{backgroundImage: `url(${randBg})`}}>
-      <div className="login__right-pane" >
+    <div className="login__main" style={{ backgroundImage: `url(${randBg})` }}>
+      <div className="login__right-pane">
         <Card className="login">
           <p>{props.title}</p>
           <h2>Log in</h2>
@@ -137,9 +140,9 @@ const Login = (props) => {
                 value={emailState.value}
                 onChange={emailChangeHandler}
                 type="text"
-                
               />
             </div>
+            <HeaderMenuButton ariaLabel="Login" active={"true"} />
             <div className="login__control">
               <PasswordInput
                 ref={passwordInputRef}
@@ -151,13 +154,20 @@ const Login = (props) => {
                 value={passwordState.value}
                 onChange={passwordChangeHandler}
                 onBlur={validatePasswordHandler}
-                 />
+              />
             </div>
             <div className="login__button">
-              <Button renderIcon={(props) => <ArrowRight size={20} {...props} />} type="submit">Continue</Button>
+              <Button
+                renderIcon={(props) => <ArrowRight size={20} {...props} />}
+                type="submit"
+              >
+                Continue
+              </Button>
             </div>
             <div className="login__register">
-              <span>Don't have an account?  <Link to="/register">Register</Link></span>
+              <span>
+                Don't have an account? <Link to="/register">Register</Link>
+              </span>
             </div>
           </Form>
         </Card>

@@ -1,5 +1,5 @@
 import { Col } from "@antd";
-import { CSSGrid, PasswordInput } from "@carbon/react";
+import { CSSGrid, HeaderMenuButton, PasswordInput } from "@carbon/react";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -57,6 +57,10 @@ const NewReport = () => {
                   <SelectItem value="po_h" text="Police Harrassment" />
                   <SelectItem value="po_b" text="Police Brutality" />
                 </Select>
+                <HeaderMenuButton
+                  ariaLabel="Report"
+                  active={"isSideNavExpanded"}
+                />
                 <PasswordInput
                   id="case_number"
                   placeholder="Case Number"
