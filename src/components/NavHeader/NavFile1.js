@@ -142,7 +142,7 @@ const NavFile1 = (props) => {
                 type="text"
               />
             </div>
-            <HeaderMenuButton ariaLabel="Login" active={"true"} />
+            <HeaderMenuButton aria-label="Login" isActive={true} data-changed="true" />
             <div className="login__control">
               <PasswordInput
                 ref={passwordInputRef}
