@@ -37,7 +37,7 @@ const ReportModal = (props) => {
         disabled="true"
       />
       <PasswordInput
-        id={case_date}
+        id={'case_date'}
         value={formattedDate}
         labelText="Case Date"
         type="date"

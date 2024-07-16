@@ -1,5 +1,4 @@
-import { Col } from "@antd";
-import { CSSGrid, HeaderMenuButton, PasswordInput } from "@carbon/react";
+import { HeaderMenuButton, PasswordInput, Column, Grid } from "@carbon/react";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -25,26 +24,26 @@ const NewReport = () => {
   };
 
   return (
-    <CSSGrid className="newreport-page" fullWidth="true">
-      <Col lg="16" md="8" sm="4">
-        <CSSGrid className="newreport-page__banner">
-          <Col lg="16" md="4" sm="4">
+    <Grid className="newreport-page" fullWidth="true">
+      <Column lg="16" md="8" sm="4">
+        <Grid className="newreport-page__banner">
+          <Column lg="16" md="4" sm="4">
             <Breadcrumb noTrailingSlash="true" aria-label="Page navigation">
               <BreadcrumbItem>
                 <a href="/">Home</a>
               </BreadcrumbItem>
               <BreadcrumbItem>New Report</BreadcrumbItem>
             </Breadcrumb>
-          </Col>
-          <Col lg="16" md="4" sm="4">
+          </Column>
+          <Column lg="16" md="4" sm="4">
             <h1 className="newreport-page__heading">
               New <span style={{ fontWeight: "bolder" }}>Witness Report</span>
             </h1>
-          </Col>
-        </CSSGrid>
+          </Column>
+        </Grid>
         <Form>
-          <CSSGrid>
-            <Col lg="10" md="4" sm="4">
+          <Grid>
+            <Column lg="10" md="4" sm="4">
               <Card className="newreport-page__card">
                 <h4>Incident</h4>
                 <Select id="incident_type" defaultValue="placeholder-item">
@@ -102,8 +101,8 @@ const NewReport = () => {
                   <SelectItem value="lang_sk" text="Korean" />
                 </Select>
               </Card>
-            </Col>
-            <Col lg="6" md="4" sm="4">
+            </Column>
+            <Column lg="6" md="4" sm="4">
               <Card className="newreport-page__card">
                 <h4>Address</h4>
                 <PasswordInput
@@ -131,10 +130,10 @@ const NewReport = () => {
                   type="text"
                 />
               </Card>
-            </Col>
-          </CSSGrid>
-          <CSSGrid className="newreport-page" fullWidth="true">
-            <Col lg="16" md="8" sm="4" className="newreport-page__r2">
+            </Column>
+          </Grid>
+          <Grid className="newreport-page" fullWidth="true">
+            <Column lg="16" md="8" sm="4" className="newreport-page__r2">
               <Card className="newreport-page__card">
                 <h4>Upload Files (Audio, Video)</h4>
                 <FormGroup legendText="">
@@ -144,19 +143,19 @@ const NewReport = () => {
                   />
                 </FormGroup>
               </Card>
-            </Col>
-          </CSSGrid>
-          <CSSGrid className="newreport-page__actions">
-            <Col lg="16" md="8" sm="4" className="newreport-page__save">
+            </Column>
+          </Grid>
+          <Grid className="newreport-page__actions">
+            <Column lg="16" md="8" sm="4" className="newreport-page__save">
               <Button type="submit">Save</Button>
               <Button type="button" kind="secondary" onClick={routeChange}>
                 Cancel
               </Button>
-            </Col>
-          </CSSGrid>
+            </Column>
+          </Grid>
         </Form>
-      </Col>
-    </CSSGrid>
+      </Column>
+    </Grid>
   );
 };
 

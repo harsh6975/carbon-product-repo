@@ -60,7 +60,6 @@ const UserProfile = (props) => {
               lg="3"
               md="4"
               sm="4"
-              className={textAlign: 'center'}
               >
               <Card className="userprofile-page__card">
                 <img src={userProfileImage} alt="User" style={{border: '0px solid #000', width: '98%', borderRadius: '5%'}} /><br />

@@ -1,18 +1,17 @@
-import { Col } from "@antd";
 import React from 'react';
-import { Grid } from '@carbon/react';
+import { Column, Grid } from '@carbon/react';
 
 const PageSeparator = (props) => {
   return (
     <Grid>
-      <Col
+      <Column
         lg="16"
         md="8"
         sm="4"
         className="dashboard-page__separator"
         >
           <h4>{props.title}</h4>
-      </Col>
+      </Column>
     </Grid>
   );
 };

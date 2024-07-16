@@ -4,22 +4,22 @@ import {
   Breadcrumb,
   BreadcrumbItem,
   ClickableTile,
-  Pagination,
-  Tile,
+  Column,
   Grid,
-  Column
+  Pagination,
+  Tile
 } from '@carbon/react';
 
-import { SimpleBarChart, DonutChart } from '@carbon/charts-react';
+import { DonutChart, SimpleBarChart } from '@carbon/charts-react';
 
-import { CloseFilled, WarningFilled, CheckmarkFilled, VideoChat, Image, Police, Folders, Upload } from '@carbon/react/icons';
+import { CheckmarkFilled, CloseFilled, Folders, Image, Police, Upload, VideoChat, WarningFilled } from '@carbon/react/icons';
 
 import PageSeparator from '../../components/Dashboard/PageSeparator';
-import ReportsTable from '../../components/ReportsTable/ReportsTable';
 import ReportModal from '../../components/Report/ReportModal';
+import ReportsTable from '../../components/ReportsTable/ReportsTable';
 
-import header_data from '../../components/Dashboard/header_data';
 import dummy_data from '../../components/Dashboard/dummy_data';
+import header_data from '../../components/Dashboard/header_data';
 
 const headerData = header_data;
 const rowData = dummy_data.map( x => {
@@ -228,7 +228,7 @@ const Dashboard = () => {
                 md="4"
                 lg="10"
                 sm="4"
-                style={float: 'left', border: '1px solid #cccccc'}
+                style={{float: 'left', border: '1px solid #cccccc'}}
                 >
                 <SimpleBarChart
                   data={chartStatus.data}
@@ -239,7 +239,7 @@ const Dashboard = () => {
                 md="4"
                 lg="6"
                 sm="4"
-                style={float: 'right', border: '1px solid #cccccc'}
+                style={{float: 'right', border: '1px solid #cccccc'}}
                 >
                 <DonutChart
                   data={chartStatus.data}
