@@ -75,6 +75,7 @@ const NavHeader = (props) => {
               <Logout size={20} />
             </HeaderGlobalAction>
           </HeaderGlobalBar>
+          <ReportsTable/>
         </Header>
       )}
     />
