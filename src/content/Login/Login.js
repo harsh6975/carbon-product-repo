@@ -127,7 +127,7 @@ const Login = (props) => {
   return (
     <div className="login__main" style={{backgroundImage: `url(${randBg})`}}>
       <div className="login__right-pane" >
-        <Card className="login">
+        <Card className="login" changed='true'>
           <p>{props.title}</p>
           <h2>Log in</h2>
           <Form onSubmit={submitHandler}>

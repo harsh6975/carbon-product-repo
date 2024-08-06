@@ -48,7 +48,7 @@ const NewReport = () => {
         <Form>
           <Grid>
             <Column lg={10} md={4} sm={4}>
-              <Card className="newreport-page__card">
+              <Card className="newreport-page__card" change='true'>
                 <h4>Incident</h4>
                 <Select id="incident_type" defaultValue="placeholder-item" >
                   <SelectItem disabled hidden value="placeholder-item" text="Choose an option" />

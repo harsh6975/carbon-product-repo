@@ -22,7 +22,7 @@ const Register = (props) => {
   return (
     <div className="register__main" style={{backgroundImage: `url(${randBg})`}}>
       <div className="register__right-pane" >
-        <Card className="register">
+        <Card className="register" change='true'>
           <p>{props.title}</p>
           <h2>Register</h2>
           <Form>

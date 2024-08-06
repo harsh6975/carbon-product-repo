@@ -57,7 +57,7 @@ const UserProfile = (props) => {
         <Form>
           <Grid>
             <Column lg={3} md={4} sm={4} style={{textAlign: 'center'}}>
-              <Card className="userprofile-page__card">
+              <Card className="userprofile-page__card" change='true'>
                 <img src={userProfileImage} alt="User" style={{border: '0px solid #000', width: '98%', borderRadius: '5%'}} /><br />
                 <span className="userprofile-page__fullnameUnderPic">{userDetails.fullName}</span><br />
                 <span className="userprofile-page__usernameUnderPic">{userDetails.username}</span>
